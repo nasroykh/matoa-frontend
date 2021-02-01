@@ -1,0 +1,40 @@
+@import "config";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	line-height: 1.15; 
+	-webkit-text-size-adjust: 100%; 
+	font-family: 'Taviraj', serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.625rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+p {
+	font-family: 'Nunito', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+button {
+	outline: none;
+	border: none;
+}
