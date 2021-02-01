@@ -1,1 +1,99 @@
-*{margin:0;padding:0;box-sizing:border-box}html{line-height:1.15;-webkit-text-size-adjust:100%;font-family:'Taviraj', serif}img{max-width:100%}h1{font-size:3rem}h2{font-size:2.625rem}h3{font-size:1.5rem}p{font-family:'Nunito', sans-serif;font-size:1rem;font-weight:400}button{outline:none;border:none}
+header > div > nav, header > div .navbar-links, header > div .navbar-buttons, header > div .navbar-buttons #user-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Taviraj', serif;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header > div {
+  padding: 0 10.3125em;
+}
+
+header > div > nav {
+  height: 6.5em;
+  letter-spacing: 0.02rem;
+}
+
+header > div .navbar-links {
+  margin-left: 4.5em;
+}
+
+header > div .navbar-links > li > a {
+  margin: 0 .7em;
+  padding: 0 .3em;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+header > div .navbar-buttons > button {
+  margin-left: 3.5em;
+}
+
+header > div .navbar-buttons > button:first-child {
+  margin-left: 0;
+}
+
+header > div .navbar-buttons > button:last-child {
+  background-color: #F1DDC9;
+  border-radius: 1000px;
+  padding: .5em .75em;
+}
+
+header > div .navbar-buttons #user-btn {
+  font-weight: 400;
+  color: #333;
+}
+
+header > div .navbar-buttons #user-btn > label {
+  font-size: 1.125rem;
+  margin-left: .5em;
+}

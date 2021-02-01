@@ -4,24 +4,25 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Taviraj', serif;
 }
 
 html {
 	line-height: 1.15; 
 	-webkit-text-size-adjust: 100%; 
-	font-family: 'Taviraj', serif;
 }
 
 img {
 	max-width: 100%;
+	display: block;
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 2.25rem;
 }
 
 h2 {
-	font-size: 2.625rem;
+	font-size: 1.75rem;
 }
 
 h3 {
@@ -37,4 +38,67 @@ p {
 button {
 	outline: none;
 	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+header > div {
+	padding: 0 10.3125em;
+	
+	& > nav {
+		height: 6.5em;
+		@extend %flex;
+		letter-spacing: 0.02rem;
+	}
+	
+	.navbar-links {
+		@extend %flex;
+
+		margin-left: 4.5em;
+		
+		& > li > a {
+			margin: 0 .7em;
+			padding: 0 .3em;
+			color: #333;
+			font-size: 1.25rem;
+		}
+	}
+
+	.navbar-buttons {
+		@extend %flex;
+
+		& > button {
+			margin-left: 3.5em;
+		}
+
+		& > button:first-child {
+			margin-left: 0;
+		}
+		
+		& > button:last-child {
+			background-color: $secondaryColor;
+			border-radius: 1000px;
+			padding: .5em .75em;
+		}
+		
+		
+		#user-btn {
+			@extend %flex;
+			font-weight: 400;
+			color: #333;
+			& > label {
+				font-size: 1.125rem;
+				margin-left: .5em;
+			}
+		}
+		
+	}
 }

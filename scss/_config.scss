@@ -1,2 +1,8 @@
 $primaryColor: #D84727;
 $secondaryColor: #F1DDC9;
+
+%flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
