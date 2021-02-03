@@ -1,4 +1,4 @@
-header > div > nav, header > div .navbar-links, header > div .navbar-buttons, header > div .navbar-buttons #user-btn {
+header > div .navbar-links, header > div .navbar-buttons, header > div .navbar-buttons #user-btn, .hero-section .hero-content, .hero-section .hero-content .hero-text .hero-btns, .hero-section .hero-content .hero-text .hero-btns > button, .hero-section .hero-content .hero-control, .discover-section > div, .deals-section > div > div > ul, .deals-section > div > div > ul > li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,6 +9,11 @@ header > div > nav, header > div .navbar-links, header > div .navbar-buttons, he
   padding: 0;
   box-sizing: border-box;
   font-family: 'Taviraj', serif;
+  color: #333;
+}
+
+body {
+  background-color: #F7F6F4;
 }
 
 html {
@@ -23,6 +28,14 @@ img {
 
 h1 {
   font-size: 2.25rem;
+  letter-spacing: 0.02rem;
+}
+
+.section-title {
+  font-weight: 500;
+  background: linear-gradient(black, black) bottom left no-repeat;
+  background-size: 15% 1px;
+  padding-bottom: 10px;
 }
 
 h2 {
@@ -37,6 +50,7 @@ p {
   font-family: 'Nunito', sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  letter-spacing: 0.03rem;
 }
 
 button {
@@ -55,45 +69,207 @@ ul {
 }
 
 header > div {
-  padding: 0 10.3125em;
+  padding: 2.5em 10.3125em;
+  margin-bottom: 3em;
 }
 
 header > div > nav {
-  height: 6.5em;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 1fr;
+  align-items: center;
   letter-spacing: 0.02rem;
 }
 
 header > div .navbar-links {
-  margin-left: 4.5em;
+  justify-content: center;
 }
 
 header > div .navbar-links > li > a {
-  margin: 0 .7em;
-  padding: 0 .3em;
   color: #333;
   font-size: 1.25rem;
-}
-
-header > div .navbar-buttons > button {
-  margin-left: 3.5em;
-}
-
-header > div .navbar-buttons > button:first-child {
-  margin-left: 0;
-}
-
-header > div .navbar-buttons > button:last-child {
-  background-color: #F1DDC9;
-  border-radius: 1000px;
-  padding: .5em .75em;
+  margin: 0 .5em;
+  padding: 0 .5em;
 }
 
 header > div .navbar-buttons #user-btn {
-  font-weight: 400;
-  color: #333;
+  cursor: pointer;
 }
 
-header > div .navbar-buttons #user-btn > label {
+header > div .navbar-buttons #user-btn > span {
   font-size: 1.125rem;
   margin-left: .5em;
+}
+
+.hero-section {
+  position: relative;
+  margin-bottom: 12em;
+}
+
+.hero-section > img {
+  position: absolute;
+  right: 0;
+  top: -22%;
+  z-index: 1;
+}
+
+.hero-section .hero-content {
+  padding: 2em 0 0;
+  position: relative;
+  margin: 0 10.3125em;
+  background-color: #F1DDC9;
+}
+
+.hero-section .hero-content > img {
+  margin-left: .5em;
+  position: relative;
+  bottom: -75px;
+}
+
+.hero-section .hero-content .hero-text {
+  z-index: 150;
+  margin: 1.5em 11em 0 3em;
+}
+
+.hero-section .hero-content .hero-text > h1 {
+  font-size: 3.75rem;
+  font-weight: 400;
+  line-height: 1.3em;
+}
+
+.hero-section .hero-content .hero-text > hr {
+  width: 20%;
+  margin: .5em 0 1em;
+  border-top: none;
+  border-color: #000;
+}
+
+.hero-section .hero-content .hero-text > p {
+  margin: 1.5em 0 1em;
+  line-height: 1.4em;
+}
+
+.hero-section .hero-content .hero-text > a {
+  border-bottom: 1px solid #333;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+}
+
+.hero-section .hero-content .hero-text .hero-btns {
+  justify-content: flex-start;
+  margin: 3em 0;
+}
+
+.hero-section .hero-content .hero-text .hero-btns > button {
+  border: 2px solid #D84727;
+}
+
+.hero-section .hero-content .hero-text .hero-btns > button:first-child {
+  margin-right: 1em;
+  padding: 0.875em 2.5em;
+  background-color: #D84727;
+}
+
+.hero-section .hero-content .hero-text .hero-btns > button:first-child > img {
+  margin-right: 1em;
+}
+
+.hero-section .hero-content .hero-text .hero-btns > button:first-child > span {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.hero-section .hero-content .hero-text .hero-btns > button:last-child {
+  padding: 0.875em 2.75em;
+}
+
+.hero-section .hero-content .hero-control {
+  position: absolute;
+  right: 3%;
+  bottom: -5%;
+}
+
+.hero-section .hero-content .hero-control > button {
+  border: 2px solid #D84727;
+  padding: 1.125em 1.5em;
+}
+
+.hero-section .hero-content .hero-control > button:last-child {
+  background-color: #D84727;
+  margin-left: 1em;
+}
+
+.discover-section {
+  margin-bottom: 6em;
+}
+
+.discover-section > div {
+  align-items: stretch;
+  padding: 0 10.3125em;
+}
+
+.discover-section > div > div:first-child {
+  margin-right: 1em;
+}
+
+.discover-section > div > div:last-child {
+  margin-left: 1em;
+}
+
+.discover-section > div > div {
+  background-color: #fff;
+  padding: 2em .5em 0 2em;
+  height: 16.875em;
+  width: 50%;
+  min-width: 475px;
+  position: relative;
+}
+
+.discover-section > div > div > div {
+  width: 75%;
+}
+
+.discover-section > div > div > div > h2 {
+  font-weight: 400;
+}
+
+.discover-section > div > div > div > h2 b {
+  font-weight: 600;
+}
+
+.discover-section > div > div > div > p {
+  color: #777;
+  margin: .5em 0;
+  line-height: 1.5em;
+}
+
+.discover-section > div > div > div > a {
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  border-bottom: 1px solid #333;
+}
+
+.discover-section > div > div > img {
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+}
+
+.deals-section > div {
+  padding: 0 10.3125em;
+}
+
+.deals-section > div > h1 {
+  margin-bottom: 1.5em;
+}
+
+.deals-section > div > div > ul {
+  align-items: stretch;
+}
+
+.deals-section > div > div > ul > li {
+  background-color: #fff;
+  padding: 1em;
+  width: 23%;
+  flex-direction: column;
 }

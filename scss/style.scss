@@ -5,6 +5,11 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Taviraj', serif;
+	color: #333;
+}
+
+body {
+	background-color: #F7F6F4;
 }
 
 html {
@@ -19,6 +24,14 @@ img {
 
 h1 {
 	font-size: 2.25rem;
+	letter-spacing: 0.02rem;
+}
+
+.section-title {
+	font-weight: 500;
+	background: linear-gradient(black,black) bottom left no-repeat;
+	background-size: 15% 1px;
+	padding-bottom: 10px; 
 }
 
 h2 {
@@ -33,6 +46,7 @@ p {
 	font-family: 'Nunito', sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
+	letter-spacing: 0.03rem;
 }
 
 button {
@@ -51,54 +65,224 @@ ul {
 }
 
 header > div {
-	padding: 0 10.3125em;
+	padding: 2.5em 10.3125em;
+	margin-bottom: 3em;
 	
 	& > nav {
-		height: 6.5em;
-		@extend %flex;
+		display: grid;
+		grid-template-columns: 20% 60% 20%;
+		grid-template-rows: 1fr;
+		align-items: center;
 		letter-spacing: 0.02rem;
 	}
 	
 	.navbar-links {
 		@extend %flex;
-
-		margin-left: 4.5em;
-		
+		justify-content: center;
 		& > li > a {
-			margin: 0 .7em;
-			padding: 0 .3em;
 			color: #333;
 			font-size: 1.25rem;
+			margin: 0 .5em;
+			padding: 0 .5em 
 		}
 	}
 
 	.navbar-buttons {
 		@extend %flex;
 
-		& > button {
-			margin-left: 3.5em;
-		}
-
-		& > button:first-child {
-			margin-left: 0;
-		}
-		
-		& > button:last-child {
-			background-color: $secondaryColor;
-			border-radius: 1000px;
-			padding: .5em .75em;
-		}
-		
-		
 		#user-btn {
 			@extend %flex;
-			font-weight: 400;
-			color: #333;
-			& > label {
+			cursor: pointer;
+
+			& > span {
 				font-size: 1.125rem;
 				margin-left: .5em;
 			}
 		}
+	}
+}
+
+.hero-section {
+	position: relative;
+	margin-bottom: 12em;
+	& > img {
+		position: absolute;
+		right: 0;
+		top: -22%;
+		z-index: 1;
+	}
+	
+	.hero-content {
+		padding: 2em 0 0;
+		position: relative;
+		margin: 0 10.3125em;
+		@extend %flex;
+		background-color: $secondaryColor;
 		
+		& > img {
+			margin-left: .5em; 
+			position: relative;
+			bottom: -75px;
+		}
+		
+		.hero-text {
+			z-index: 150;
+			margin: 1.5em 11em 0 3em;
+			& > h1 {
+				font-size: 3.75rem;
+				font-weight: 400;
+				line-height: 1.3em;
+			}
+
+			& > hr {
+				width: 20%;
+				margin: .5em 0 1em;
+				border-top: none;
+				border-color: #000;
+			}
+
+			& > p {
+				margin: 1.5em 0 1em;
+				line-height: 1.4em;
+			}
+
+			& > a {
+				border-bottom: 1px solid #333;
+				font-weight: 600;
+				letter-spacing: 0.03rem;
+			}
+
+			.hero-btns {
+				@extend %flex;
+				justify-content: flex-start;
+				margin: 3em 0;
+				& > button {
+					border: 2px solid $primaryColor;
+					@extend %flex;
+				}
+				
+				& > button:first-child {
+					margin-right: 1em;
+					padding: 0.875em 2.5em;
+					background-color: $primaryColor;
+					& > img {
+						margin-right: 1em;
+					}
+					
+					& > span {
+						font-size: 1.25rem;
+						color: #fff;
+					}
+				}
+				
+				& > button:last-child {
+					padding: 0.875em 2.75em;
+					
+				}
+			}
+
+		}
+
+		.hero-control {
+			@extend %flex;
+			position: absolute;
+			right: 3%;
+			bottom: -5%;
+
+			& > button {
+				border: 2px solid $primaryColor;
+				padding: 1.125em 1.5em;
+			}
+
+			& > button:first-child {
+				
+			}
+
+			& > button:last-child {
+				background-color: $primaryColor;
+				margin-left: 1em;
+			}
+		}
+	}
+}
+
+.discover-section {
+	margin-bottom: 6em;
+	& > div {
+		@extend %flex;
+		align-items: stretch;
+		padding: 0 10.3125em;
+
+		& > div:first-child {
+			margin-right: 1em;
+		}
+
+		& > div:last-child {
+			margin-left: 1em;
+		}
+
+		& > div {
+			background-color: #fff;
+			padding: 2em .5em 0 2em;
+			height: 16.875em;
+			width: 50%;
+			min-width: 475px;
+			position: relative;
+
+			& > div {
+				width: 75%;
+				& > h2 {
+					font-weight: 400;
+					b {
+						font-weight: 600;
+					}
+				}
+
+				& > p {
+					color: #777;
+					margin: .5em 0;
+					line-height: 1.5em;
+				}
+
+				& > a {
+					font-weight: 600;
+					letter-spacing: 0.03rem;
+					border-bottom: 1px solid #333;
+				}
+			}
+
+			& > img {
+				position: absolute;
+				bottom: 5%;
+				right: 0;
+			}
+		}
+
+	}
+}
+
+.deals-section {
+	& > div {
+		padding: 0 10.3125em;
+
+		& > h1 {
+			margin-bottom: 1.5em;
+		}
+
+		& > div {
+			& > ul {
+				@extend %flex;
+				align-items: stretch;
+
+				& > li {
+					background-color: #fff;
+					padding: 1em;
+					width: 23%;
+					@extend %flex;
+					flex-direction: column;
+				}
+			}
+		}
+
 	}
 }
