@@ -4,17 +4,17 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Taviraj', serif;
+	font-family: "Taviraj", serif;
 	color: #333;
 }
 
 body {
-	background-color: #F7F6F4;
+	background-color: #f7f6f4;
 }
 
 html {
-	line-height: 1.15; 
-	-webkit-text-size-adjust: 100%; 
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
 }
 
 img {
@@ -29,9 +29,10 @@ h1 {
 
 .section-title {
 	font-weight: 500;
-	background: linear-gradient(black,black) bottom left no-repeat;
+	background: linear-gradient(black, black) bottom left no-repeat;
 	background-size: 15% 1px;
-	padding-bottom: 10px; 
+	margin-bottom: 2.5em;
+	padding-bottom: 10px;
 }
 
 h2 {
@@ -43,7 +44,7 @@ h3 {
 }
 
 p {
-	font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
 	letter-spacing: 0.03rem;
@@ -67,7 +68,7 @@ ul {
 header > div {
 	padding: 2.5em 10.3125em;
 	margin-bottom: 3em;
-	
+
 	& > nav {
 		display: grid;
 		grid-template-columns: 20% 60% 20%;
@@ -75,15 +76,15 @@ header > div {
 		align-items: center;
 		letter-spacing: 0.02rem;
 	}
-	
+
 	.navbar-links {
 		@extend %flex;
 		justify-content: center;
 		& > li > a {
 			color: #333;
 			font-size: 1.25rem;
-			margin: 0 .5em;
-			padding: 0 .5em 
+			margin: 0 0.5em;
+			padding: 0 0.5em;
 		}
 	}
 
@@ -96,7 +97,7 @@ header > div {
 
 			& > span {
 				font-size: 1.125rem;
-				margin-left: .5em;
+				margin-left: 0.5em;
 			}
 		}
 	}
@@ -111,20 +112,20 @@ header > div {
 		top: -22%;
 		z-index: 1;
 	}
-	
+
 	.hero-content {
 		padding: 2em 0 0;
 		position: relative;
 		margin: 0 10.3125em;
 		@extend %flex;
 		background-color: $secondaryColor;
-		
+
 		& > img {
-			margin-left: .5em; 
+			margin-left: 0.5em;
 			position: relative;
 			bottom: -75px;
 		}
-		
+
 		.hero-text {
 			z-index: 150;
 			margin: 1.5em 11em 0 3em;
@@ -136,7 +137,7 @@ header > div {
 
 			& > hr {
 				width: 20%;
-				margin: .5em 0 1em;
+				margin: 0.5em 0 1em;
 				border-top: none;
 				border-color: #000;
 			}
@@ -160,7 +161,7 @@ header > div {
 					border: 2px solid $primaryColor;
 					@extend %flex;
 				}
-				
+
 				& > button:first-child {
 					margin-right: 1em;
 					padding: 0.875em 2.5em;
@@ -168,19 +169,17 @@ header > div {
 					& > img {
 						margin-right: 1em;
 					}
-					
+
 					& > span {
 						font-size: 1.25rem;
 						color: #fff;
 					}
 				}
-				
+
 				& > button:last-child {
 					padding: 0.875em 2.75em;
-					
 				}
 			}
-
 		}
 
 		.hero-control {
@@ -195,7 +194,6 @@ header > div {
 			}
 
 			& > button:first-child {
-				
 			}
 
 			& > button:last-child {
@@ -223,7 +221,7 @@ header > div {
 
 		& > div {
 			background-color: #fff;
-			padding: 2em .5em 0 2em;
+			padding: 2em 0.5em 0 2em;
 			height: 16.875em;
 			width: 50%;
 			min-width: 475px;
@@ -240,7 +238,7 @@ header > div {
 
 				& > p {
 					color: #777;
-					margin: .5em 0;
+					margin: 0.5em 0;
 					line-height: 1.5em;
 				}
 
@@ -257,11 +255,91 @@ header > div {
 				right: 0;
 			}
 		}
-
 	}
 }
 
 .deals-section {
+	margin-bottom: 6em;
+	& > div {
+		padding: 0 10.3125em;
+
+		& > div {
+			& > ul {
+				@extend %flex;
+				align-items: flex-start;
+
+				& > li {
+					background-color: #fff;
+					padding: 0 1.5625em 2em;
+					width: 23%;
+					@extend %flex;
+					flex-direction: column;
+					align-items: flex-start;
+
+					& > img {
+						position: relative;
+						bottom: 2em;
+					}
+
+					& > h3:first-of-type {
+						font-weight: 500;
+						width: 100%;
+					}
+
+					& > p:first-of-type {
+						margin: 0.5em 0;
+						color: #777;
+					}
+
+					& > p:last-of-type {
+						color: #777;
+						text-decoration: line-through;
+						text-decoration-color: #d93f3f;
+					}
+
+					& > h3:last-of-type {
+						font-weight: 400;
+						margin: 0.5em 0;
+					}
+
+					& > div {
+						@extend %flex;
+						align-items: stretch;
+						width: 100%;
+
+						& > button:first-of-type {
+							border: 1px solid $primaryColor;
+							width: 3em;
+							height: 3em;
+							@extend %flex;
+							justify-content: center;
+						}
+
+						& > button:last-of-type {
+							border: 1px solid $primaryColor;
+							background-color: $primaryColor;
+							font-size: 1rem;
+							width: 75%;
+							margin-left: 0.5em;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.news-section {
+	margin-bottom: 6em;
+	position: relative;
+
+	& > img {
+		position: absolute;
+		z-index: -1;
+		right: 0;
+	}
+
 	& > div {
 		padding: 0 10.3125em;
 
@@ -270,19 +348,40 @@ header > div {
 		}
 
 		& > div {
-			& > ul {
+			@extend %flex;
+
+			& > div:first-child {
 				@extend %flex;
-				align-items: stretch;
-
-				& > li {
-					background-color: #fff;
-					padding: 1em;
-					width: 23%;
-					@extend %flex;
-					flex-direction: column;
+				align-items: flex-start;
+				flex-direction: column;
+				flex: 2;
+				padding-right: 3em;
+				margin-right: 2em;
+				
+				& > h4 {
+					color: #777;
+					font-size: 1.25rem;
+					font-weight: 400;
 				}
+				
+				& > h1 {
+					margin: .5em 0 1.5em;
+					font-weight: 400;
+				}
+				
+				& > button {
+					font-size: 1rem;
+					border: 2px solid $primaryColor;
+					padding: .75em 3em;
+					color: $primaryColor;
+				}
+				
 			}
+			
+			& > div:last-child {
+				flex: 3;
+			}
+			
 		}
-
 	}
 }

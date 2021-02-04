@@ -1,4 +1,4 @@
-header > div .navbar-links, header > div .navbar-buttons, header > div .navbar-buttons #user-btn, .hero-section .hero-content, .hero-section .hero-content .hero-text .hero-btns, .hero-section .hero-content .hero-text .hero-btns > button, .hero-section .hero-content .hero-control, .discover-section > div, .deals-section > div > div > ul, .deals-section > div > div > ul > li {
+header > div .navbar-links, header > div .navbar-buttons, header > div .navbar-buttons #user-btn, .hero-section .hero-content, .hero-section .hero-content .hero-text .hero-btns, .hero-section .hero-content .hero-text .hero-btns > button, .hero-section .hero-content .hero-control, .discover-section > div, .deals-section > div > div > ul, .deals-section > div > div > ul > li, .deals-section > div > div > ul > li > div, .deals-section > div > div > ul > li > div > button:first-of-type, .news-section > div > div, .news-section > div > div > div:first-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,12 +8,12 @@ header > div .navbar-links, header > div .navbar-buttons, header > div .navbar-b
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Taviraj', serif;
+  font-family: "Taviraj", serif;
   color: #333;
 }
 
 body {
-  background-color: #F7F6F4;
+  background-color: #f7f6f4;
 }
 
 html {
@@ -35,6 +35,7 @@ h1 {
   font-weight: 500;
   background: linear-gradient(black, black) bottom left no-repeat;
   background-size: 15% 1px;
+  margin-bottom: 2.5em;
   padding-bottom: 10px;
 }
 
@@ -47,7 +48,7 @@ h3 {
 }
 
 p {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.03rem;
@@ -88,8 +89,8 @@ header > div .navbar-links {
 header > div .navbar-links > li > a {
   color: #333;
   font-size: 1.25rem;
-  margin: 0 .5em;
-  padding: 0 .5em;
+  margin: 0 0.5em;
+  padding: 0 0.5em;
 }
 
 header > div .navbar-buttons #user-btn {
@@ -98,7 +99,7 @@ header > div .navbar-buttons #user-btn {
 
 header > div .navbar-buttons #user-btn > span {
   font-size: 1.125rem;
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 
 .hero-section {
@@ -121,7 +122,7 @@ header > div .navbar-buttons #user-btn > span {
 }
 
 .hero-section .hero-content > img {
-  margin-left: .5em;
+  margin-left: 0.5em;
   position: relative;
   bottom: -75px;
 }
@@ -139,7 +140,7 @@ header > div .navbar-buttons #user-btn > span {
 
 .hero-section .hero-content .hero-text > hr {
   width: 20%;
-  margin: .5em 0 1em;
+  margin: 0.5em 0 1em;
   border-top: none;
   border-color: #000;
 }
@@ -218,7 +219,7 @@ header > div .navbar-buttons #user-btn > span {
 
 .discover-section > div > div {
   background-color: #fff;
-  padding: 2em .5em 0 2em;
+  padding: 2em 0.5em 0 2em;
   height: 16.875em;
   width: 50%;
   min-width: 475px;
@@ -239,7 +240,7 @@ header > div .navbar-buttons #user-btn > span {
 
 .discover-section > div > div > div > p {
   color: #777;
-  margin: .5em 0;
+  margin: 0.5em 0;
   line-height: 1.5em;
 }
 
@@ -255,21 +256,118 @@ header > div .navbar-buttons #user-btn > span {
   right: 0;
 }
 
+.deals-section {
+  margin-bottom: 6em;
+}
+
 .deals-section > div {
   padding: 0 10.3125em;
 }
 
-.deals-section > div > h1 {
-  margin-bottom: 1.5em;
-}
-
 .deals-section > div > div > ul {
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 .deals-section > div > div > ul > li {
   background-color: #fff;
-  padding: 1em;
+  padding: 0 1.5625em 2em;
   width: 23%;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+.deals-section > div > div > ul > li > img {
+  position: relative;
+  bottom: 2em;
+}
+
+.deals-section > div > div > ul > li > h3:first-of-type {
+  font-weight: 500;
+  width: 100%;
+}
+
+.deals-section > div > div > ul > li > p:first-of-type {
+  margin: 0.5em 0;
+  color: #777;
+}
+
+.deals-section > div > div > ul > li > p:last-of-type {
+  color: #777;
+  text-decoration: line-through;
+  text-decoration-color: #d93f3f;
+}
+
+.deals-section > div > div > ul > li > h3:last-of-type {
+  font-weight: 400;
+  margin: 0.5em 0;
+}
+
+.deals-section > div > div > ul > li > div {
+  align-items: stretch;
+  width: 100%;
+}
+
+.deals-section > div > div > ul > li > div > button:first-of-type {
+  border: 1px solid #D84727;
+  width: 3em;
+  height: 3em;
+  justify-content: center;
+}
+
+.deals-section > div > div > ul > li > div > button:last-of-type {
+  border: 1px solid #D84727;
+  background-color: #D84727;
+  font-size: 1rem;
+  width: 75%;
+  margin-left: 0.5em;
+  color: #fff;
+}
+
+.news-section {
+  margin-bottom: 6em;
+  position: relative;
+}
+
+.news-section > img {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+}
+
+.news-section > div {
+  padding: 0 10.3125em;
+}
+
+.news-section > div > h1 {
+  margin-bottom: 1.5em;
+}
+
+.news-section > div > div > div:first-child {
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 2;
+  padding-right: 3em;
+  margin-right: 2em;
+}
+
+.news-section > div > div > div:first-child > h4 {
+  color: #777;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.news-section > div > div > div:first-child > h1 {
+  margin: .5em 0 1.5em;
+  font-weight: 400;
+}
+
+.news-section > div > div > div:first-child > button {
+  font-size: 1rem;
+  border: 2px solid #D84727;
+  padding: .75em 3em;
+  color: #D84727;
+}
+
+.news-section > div > div > div:last-child {
+  flex: 3;
 }
