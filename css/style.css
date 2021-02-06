@@ -1,4 +1,4 @@
-header > div .navbar-links, header > div .navbar-buttons, header > div .navbar-buttons #user-btn, .hero-section .hero-content, .hero-section .hero-content .hero-text .hero-btns, .hero-section .hero-content .hero-text .hero-btns > button, .hero-section .hero-content .hero-control, .discover-section > div, .deals-section > div > div > ul, .deals-section > div > div > ul > li, .deals-section > div > div > ul > li > div, .deals-section > div > div > ul > li > div > button:first-of-type, .news-section > div > div, .news-section > div > div > div:first-child {
+header > div .navbar-links, header > div .navbar-buttons, header > div .navbar-buttons #user-btn, .hero-section .hero-content, .hero-section .hero-content .hero-text .hero-btns, .hero-section .hero-content .hero-text .hero-btns > button, .hero-section .hero-content .hero-control, .discover-section > div, .deals-section > div > div > ul, .deals-section > div > div > ul > li, .deals-section > div > div > ul > li > div, .deals-section > div > div > ul > li > div > button:first-of-type, .news-section > div > div, .news-section > div > div > div:first-child, .series-section > div .series > div > ul > li > div:first-child, .series-section > div > div:last-child, .testimonials-section > div, .ig-section > div > ul, footer > div > div:nth-child(2) > span, footer > div > div:nth-child(2) > ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,7 +34,8 @@ h1 {
 .section-title {
   font-weight: 500;
   background: linear-gradient(black, black) bottom left no-repeat;
-  background-size: 15% 1px;
+  background-size: 3.5em 1px;
+  display: inline-block;
   margin-bottom: 2.5em;
   padding-bottom: 10px;
 }
@@ -45,6 +46,12 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+  letter-spacing: 0.03rem;
+  margin-bottom: .5em;
+}
+
+h4 {
+  font-size: 1.25rem;
 }
 
 p {
@@ -59,10 +66,12 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+  letter-spacing: 0.03rem;
 }
 
 a {
   text-decoration: none;
+  letter-spacing: 0.03rem;
 }
 
 ul {
@@ -279,6 +288,7 @@ header > div .navbar-buttons #user-btn > span {
 .deals-section > div > div > ul > li > img {
   position: relative;
   bottom: 2em;
+  margin: 0 auto;
 }
 
 .deals-section > div > div > ul > li > h3:first-of-type {
@@ -332,6 +342,7 @@ header > div .navbar-buttons #user-btn > span {
   position: absolute;
   z-index: -1;
   right: 0;
+  top: -5%;
 }
 
 .news-section > div {
@@ -339,7 +350,7 @@ header > div .navbar-buttons #user-btn > span {
 }
 
 .news-section > div > h1 {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.75em;
 }
 
 .news-section > div > div > div:first-child {
@@ -352,7 +363,6 @@ header > div .navbar-buttons #user-btn > span {
 
 .news-section > div > div > div:first-child > h4 {
   color: #777;
-  font-size: 1.25rem;
   font-weight: 400;
 }
 
@@ -370,4 +380,252 @@ header > div .navbar-buttons #user-btn > span {
 
 .news-section > div > div > div:last-child {
   flex: 3;
+}
+
+.series-section {
+  margin-bottom: 6em;
+}
+
+.series-section > div {
+  padding: 0 10.3125em;
+}
+
+.series-section > div .series {
+  margin-bottom: 4em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.series-section > div .series > div > h1 {
+  font-weight: 400;
+  background-size: 1.75em 1px;
+  margin-bottom: 1.5em;
+}
+
+.series-section > div .series > div > ul {
+  display: grid;
+  column-gap: 1em;
+  row-gap: 2em;
+}
+
+.series-section > div .series > div > ul > li {
+  display: grid;
+  grid-template-columns: 8em auto;
+  grid-template-rows: 1fr;
+}
+
+.series-section > div .series > div > ul > li > div:first-child {
+  justify-content: center;
+  background-color: #F1DDC9;
+  height: 8em;
+}
+
+.series-section > div .series > div > ul > li > div:last-child {
+  padding-left: 1.5em;
+  padding-right: 1em;
+}
+
+.series-section > div .series > div > ul > li > div:last-child > h3 {
+  font-weight: 400;
+  margin: .25em 0 .5em;
+}
+
+.series-section > div .series > div > ul > li > div:last-child > p {
+  text-decoration: line-through;
+  text-decoration-color: #d93f3f;
+  margin-bottom: .5em;
+}
+
+.series-section > div .series > div > ul > li > div:last-child > h2 {
+  font-weight: 500;
+}
+
+.series-section > div > div:last-child > span {
+  height: 0.3px;
+  flex: 1;
+  background-color: rgba(153, 153, 153, 0.25);
+}
+
+.series-section > div > div:last-child > button {
+  height: 3.3em;
+  width: 13.6em;
+  margin: 0 2em;
+  border: 1px solid #D84727;
+  font-size: 1.25rem;
+  color: #D84727;
+}
+
+.testimonials-section {
+  margin-bottom: 6em;
+  position: relative;
+}
+
+.testimonials-section > img {
+  position: absolute;
+  left: 0;
+  top: -10%;
+  z-index: -1;
+}
+
+.testimonials-section > div {
+  padding: 0 10.3125em;
+}
+
+.testimonials-section > div > div:first-child {
+  flex: 55%;
+  align-self: flex-end;
+}
+
+.testimonials-section > div > div:first-child > div {
+  margin: 2em .5em;
+}
+
+.testimonials-section > div > div:first-child > div > button {
+  height: 100%;
+  vertical-align: middle;
+  margin: 0 .75em;
+}
+
+.testimonials-section > div > div:last-child {
+  flex: 45%;
+  margin: 4em 0 7em;
+}
+
+.testimonials-section > div > div:last-child > h1 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.testimonials-section > div > div:last-child > p:first-of-type {
+  margin: 4em 0;
+  line-height: 1.75em;
+}
+
+.testimonials-section > div > div:last-child > h3 {
+  font-weight: 500;
+}
+
+.testimonials-section > div > div:last-child > p:last-of-type {
+  font-weight: 300;
+  color: #777;
+}
+
+.ig-section {
+  margin-bottom: 6em;
+}
+
+.ig-section > div {
+  padding: 0 10.3125em;
+}
+
+.ig-section > div > h1 {
+  margin-bottom: 1em;
+}
+
+.sponsors-section {
+  background-color: #DA5E42;
+}
+
+.sponsors-section > div {
+  padding: 0 10.3125em;
+}
+
+.sponsors-section > div > ul {
+  padding: 3em 3em 2em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.sponsors-section > div > ul > li > img {
+  margin: auto;
+}
+
+footer > div {
+  padding: 3em 10.3125em 6em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #D84727;
+  column-gap: 2em;
+}
+
+footer > div * {
+  color: #fff;
+}
+
+footer > div > div {
+  margin: 0 auto;
+}
+
+footer > div .section-title {
+  margin-bottom: 1em;
+  font-weight: 600;
+  background: linear-gradient(white, white) bottom left no-repeat;
+  background-size: 2.5em 1px;
+}
+
+footer > div > div:nth-child(1) > h4:first-of-type {
+  margin-top: 1em;
+  font-weight: 500;
+}
+
+footer > div > div:nth-child(1) > p:first-of-type {
+  margin: 1em 0;
+  line-height: 1.75em;
+}
+
+footer > div > div:nth-child(1) > h4:last-of-type {
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+footer > div > div:nth-child(1) > p:last-of-type {
+  line-height: 1.5em;
+}
+
+footer > div > div:nth-child(2) > span {
+  align-items: flex-start;
+  margin-bottom: .5em;
+}
+
+footer > div > div:nth-child(2) > span > h4 {
+  line-height: 1.75rem;
+  flex: 1;
+  font-weight: 500;
+}
+
+footer > div > div:nth-child(2) > span > a {
+  font-size: 1rem;
+  margin-left: 1em;
+  line-height: 1.75rem;
+}
+
+footer > div > div:nth-child(2) > ul {
+  justify-content: flex-start;
+}
+
+footer > div > div:nth-child(2) > ul > li {
+  margin-right: 1.5em;
+}
+
+footer > div > div:nth-child(3) > ul > li, footer > div > div:nth-child(4) > ul > li {
+  margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
 }

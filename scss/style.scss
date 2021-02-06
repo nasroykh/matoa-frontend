@@ -30,7 +30,8 @@ h1 {
 .section-title {
 	font-weight: 500;
 	background: linear-gradient(black, black) bottom left no-repeat;
-	background-size: 15% 1px;
+	background-size: 3.5em 1px;
+	display: inline-block;
 	margin-bottom: 2.5em;
 	padding-bottom: 10px;
 }
@@ -41,6 +42,12 @@ h2 {
 
 h3 {
 	font-size: 1.5rem;
+	letter-spacing: 0.03rem;
+	margin-bottom: .5em;
+}
+
+h4 {
+	font-size: 1.25rem;
 }
 
 p {
@@ -55,10 +62,12 @@ button {
 	border: none;
 	background: none;
 	cursor: pointer;
+	letter-spacing: 0.03rem;
 }
 
 a {
 	text-decoration: none;
+	letter-spacing: 0.03rem;
 }
 
 ul {
@@ -279,6 +288,7 @@ header > div {
 					& > img {
 						position: relative;
 						bottom: 2em;
+						margin: 0 auto;
 					}
 
 					& > h3:first-of-type {
@@ -338,13 +348,14 @@ header > div {
 		position: absolute;
 		z-index: -1;
 		right: 0;
+		top: -5%;
 	}
 
 	& > div {
 		padding: 0 10.3125em;
 
 		& > h1 {
-			margin-bottom: 1.5em;
+			margin-bottom: 0.75em;
 		}
 
 		& > div {
@@ -360,7 +371,6 @@ header > div {
 				
 				& > h4 {
 					color: #777;
-					font-size: 1.25rem;
 					font-weight: 400;
 				}
 				
@@ -383,5 +393,272 @@ header > div {
 			}
 			
 		}
+	}
+}
+
+.series-section {
+	margin-bottom: 6em;
+
+	& > div {
+		padding: 0 10.3125em;
+
+		.series {
+			margin-bottom: 4em;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			& > div {
+				& > h1 {
+					font-weight: 400;
+					background-size: 1.75em 1px;
+					margin-bottom: 1.5em;
+				}
+
+				& > ul {
+					display: grid;
+					column-gap: 1em;
+					row-gap: 2em;
+					& > li {
+						display: grid;
+						grid-template-columns: 8em auto;
+						grid-template-rows: 1fr;
+						& > div:first-child {
+							@extend %flex;
+							justify-content: center;
+							background-color: $secondaryColor;
+							height: 8em;
+						}
+
+						& > div:last-child {
+							padding-left: 1.5em;
+							padding-right: 1em;
+							& > h3 {
+								font-weight: 400;
+								margin: .25em 0 .5em;
+							}
+
+							& > p {
+								text-decoration: line-through;
+								text-decoration-color: #d93f3f;
+								margin-bottom: .5em;
+							}
+
+							& > h2 {
+								font-weight: 500;
+							}
+
+						}
+					}
+				}
+			}
+		}
+
+		& > div:last-child {
+			@extend %flex;
+			& > span {
+				height: 0.3px;
+				flex: 1;
+				background-color: rgba(153, 153, 153, 0.25);
+			}
+
+			& > button {
+				height: 3.3em;
+				width: 13.6em;
+				margin: 0 2em;
+				border: 1px solid $primaryColor;
+				font-size: 1.25rem;
+				color: $primaryColor;
+			}
+
+		}
+	}
+}
+
+.testimonials-section {
+	margin-bottom: 6em;
+	position: relative;
+	& > img {
+		position: absolute;
+		left: 0;
+		top: -10%;
+		z-index: -1;
+	}
+
+	& > div {
+		padding: 0 10.3125em;
+		@extend %flex;
+
+		& > div:first-child {
+			flex: 55%;
+			align-self: flex-end;
+			& > div {
+				margin: 2em .5em;
+
+				& > button {
+					height: 100%;
+					vertical-align: middle;
+					margin: 0 .75em;
+				}
+			}
+		}
+
+		& > div:last-child {
+			flex: 45%;
+			margin: 4em 0 7em;
+			& > h1 {
+				font-weight: 600;
+				margin: 0;
+			}
+
+			& > p:first-of-type {
+				margin: 4em 0;
+				line-height: 1.75em;
+			}
+
+			& > h3 {
+				font-weight: 500;
+			}
+
+			& > p:last-of-type {
+				font-weight: 300;
+				color: #777;
+			}
+
+
+		}
+
+	}
+
+}
+
+.ig-section {
+	margin-bottom: 6em;
+
+	& > div {
+		padding: 0 10.3125em;
+
+		& > h1 {
+			margin-bottom: 1em;
+		}
+
+		& > ul {
+			@extend %flex; 
+		}
+
+	}
+}
+
+.sponsors-section {
+	background-color: #DA5E42;
+	& > div {
+		padding: 0 10.3125em;
+
+		& > ul {
+			padding: 3em 3em 2em;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr) ;
+			grid-template-rows: repeat(2, 1fr);
+
+			& > li > img {
+				margin: auto;
+			}
+		}
+	}
+}
+
+footer > div {
+	padding: 3em 10.3125em 6em;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background-color: $primaryColor;
+	column-gap: 2em;
+	* {
+		color: #fff;
+	}
+
+	& > div {
+		margin: 0 auto;
+	}
+
+	.section-title {
+		margin-bottom: 1em;
+		font-weight: 600;
+		background: linear-gradient(white, white) bottom left no-repeat;
+		background-size: 2.5em 1px;
+	}
+
+	& > div:nth-child(1) {
+
+		& > h4:first-of-type{
+			margin-top: 1em;
+			font-weight: 500;
+		}
+
+		& > p:first-of-type {
+			margin: 1em 0;
+			line-height: 1.75em;
+		}
+
+		& > h4:last-of-type{
+			font-weight: 500;
+			margin-bottom: 1em;
+		}
+		
+		& > p:last-of-type {
+			line-height: 1.5em;
+		}
+	}
+
+	& > div:nth-child(2) {
+		& > span {
+			@extend %flex;
+			align-items: flex-start;
+			margin-bottom: .5em;
+			
+			& > h4 {
+				line-height: 1.75rem;
+				flex: 1;
+				font-weight: 500;
+			}
+			
+			& > a {
+				font-size: 1rem;
+				margin-left: 1em;
+				line-height: 1.75rem;
+			}
+		}
+
+		& > ul {
+			@extend %flex;
+			justify-content: flex-start;
+
+			& > li {
+				margin-right: 1.5em;
+			}
+		}
+	}
+
+	& > div:nth-child(3), & > div:nth-child(4) {
+		& > ul > li {
+			margin-bottom: 1em;
+		}
+	}
+
+}
+
+@media (min-width:768px) {
+	html {
+	  font-size: 12px;
+	}
+}
+
+@media (min-width:1024px) {
+	html {
+	  font-size: 14px;
+	}
+}
+
+@media (min-width:1440px) {
+	html {
+	  font-size: 16px;
 	}
 }
