@@ -4,3 +4,5 @@ HTML / CSS & SASS / JavaScript.
 Designer : Muhammad Abdurrahman.
 
 Design URL : https://www.figma.com/community/file/834538026568990836/Matoa-Website-Redesign
+
+Deployed Website : https://matoa-ecommerce-eac0bc.netlify.app/
